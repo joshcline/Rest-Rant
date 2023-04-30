@@ -5,7 +5,7 @@ const app = express()
 app.use('/places', require('./controllers/places'))
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('<h1>Hello World!</h1>')
 })
 
 app.get('*', (req, res) => {
@@ -13,3 +13,4 @@ app.get('*', (req, res) => {
 })
 
 app.listen(process.env.PORT)
+console.log(process.env.PORT)
