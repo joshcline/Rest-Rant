@@ -6,19 +6,28 @@ router.get('/', (req, res) => {
     city: 'Seattle',
     state: 'WA',
     cuisines: 'Thai, Pan-Asian',
-    pic: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tripadvisor.com%2FRestaurant_Review-g54359-d1021135-Reviews-Black_Thai_Restaurant_Lounge-Myrtle_Beach_South_Carolina.html&psig=AOvVaw0C5-bosszUeS2xVkWxaUnC&ust=1683246851197000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCKD5hKe12v4CFQAAAAAdAAAAABAE'
+    pic: 'https://media-cdn.tripadvisor.com/media/photo-s/0f/8e/50/1f/seating-out-front-of.jpg'
   }, {
     name: 'Coding Cat Cafe',
     city: 'Phoenix',
     state: 'AZ',
     cuisines: 'Coffee, Bakery',
-    pic: 'https://unsplash.com/photos/x-f-YuU1nw8'
+    pic: 'https://images.unsplash.com/photo-1485118571520-91ebb7fb2a78?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=974&q=80'
   }]
   res.render('places/index', { places })
 })
 
+router.post('/', (req, res) => {
+  console.log(req.body)
+  res.send('POST /places')
+})
+
 router.get('/new', (req, res) => {
   res.render('places/new')
+})
+
+router.get('/:id', (req, res) => {
+  res.send('/places/:id')
 })
 
 module.exports = router
