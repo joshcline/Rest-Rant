@@ -7,7 +7,7 @@ function home () {
       <main>
         <h1>REST-Rant</h1>
         <div className='homeImage'>
-          <img src='public\images\chia-fruit-drink.jpg' alt='Chia Fruit Shake'/>
+          <img src='https://fitfoodiefinds.com/wp-content/uploads/2019/03/CHIA-SMOOTHIE-SQ.jpg' alt='Chia Fruit Shake'/>
           <div className='homeAuthor'>
             <a href="https://unsplash.com/@cravethebenefits?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Brenda Godinez</a> on <a href='https://unsplash.com/photos/MsTOg6rhRVk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a>
           </div>
