@@ -6,26 +6,26 @@ function edit_form (data) {
     <Def>
       <main>
         <h1>Edit Place</h1>
-        <form method='POST' action={`/places/${data.place.id}?_method=PUT`}>
+        <form method='POST' action={`/places/${data.id}?_method=PUT`}>
           <div className='form-row col'>
             <label htmlFor='name'>Place Name</label>
-            <input className='form-control' id='name' name='name' value={data.place.name} onChange required/>
+            <input className='form-control' id='name' name='name' defaultValue={data.place.name} required/>
           </div>
           <div className='form-row col'>
             <label htmlFor='pic'>Place Picture</label>
-            <input className='form-control' id='pic' name='pic'/>
+            <input className='form-control' id='pic' name='pic' defaultValue={data.place.pic}/>
           </div>
           <div className='form-row col'>
             <label htmlFor='city'>City</label>
-            <input className='form-control' type='city' name='city'/>
+            <input className='form-control' type='city' name='city' defaultValue={data.place.city}/>
           </div>
           <div className='form-row col'>
             <label htmlFor='state'>State</label>
-            <input className='form-control' type='state' name='state'/>
+            <input className='form-control' type='state' name='state' defaultValue={data.place.state}/>
           </div>
           <div className='form-row col'>
             <label htmlFor='cuisines'>Cuisines</label>
-            <input className='form-control' type='cuisines' name='cuisines' required/>
+            <input className='form-control' type='cuisines' name='cuisines' defaultValue={data.place.cuisines} required/>
           </div>
           <input className='btn btn-primary' type='submit' value='Add Place'/>
         </form>
