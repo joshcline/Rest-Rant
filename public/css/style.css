@@ -42,3 +42,13 @@ nav a:hover {
 form {
   display: inline-table;
 }
+
+nav .nav-item {
+  font-size: large;
+  right: 50px;
+  top: 14px;
+}
+
+.btn-primary {
+  margin-top: 15px;
+}
