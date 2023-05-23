@@ -7,27 +7,29 @@ function show (data) {
       <main>
         <div className='row'>
           <div className='col-sm-6'>
-            <img src={data.place.pic} />
-                <h1>{ data.place.name }</h1>
-                  <h2>
-                    Rating
-                  </h2>
-                  <p>
+            <img src={data.place.pic} alt= {data.place.name} />
+                  <h3>
+                    Located in {data.place.city}, {data.place.state}
+                  </h3>
+                  <h3>
                     Not Rated
-                  </p>
+                  </h3>
                   <h2>
                     Description
                   </h2>
-                  <p>
-                    Located in {data.place.city}, {data.place.state} and serving {data.place.cuisines}
-                  </p>
+                  <h3>
+                    {data.place.showEstablished()}
+                  </h3>
+                  <h4>
+                    serving {data.place.cuisines}
+                  </h4>
                   <br />
                   <h2>
                     Comments
                   </h2>
-                  <p>
+                  <h3>
                     No Comments Yet!
-                  </p>
+                  </h3>
                   <a href={`/places/${data.id}/edit`} className='btn btn-warning'>
                     Edit
                   </a>
